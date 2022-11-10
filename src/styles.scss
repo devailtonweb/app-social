@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: rgb(98 113 121);
+  --secondary: rgb(13, 206, 230);
+  --hover: rgb(219, 223, 224);
+  --padding: 15px;
+  --cinza : #405040;
+  --cinza-claro: #dedede;
+  --white: #FFF;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: inherit;
+}
