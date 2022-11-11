@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "email": "devailtonsilveira@gmail.com",
+      "password": "$2a$10$LtiVhHIYlPQa20uDBLgQoOA9l051.hvz8AtElio66Oq2HvRPdaTfi",
+      "id": 1
+    },
+    {
+      "email": "devailtonweb@gmail.com",
+      "password": "$2a$10$hV3O8nRQZ6vBeH6Uz0I8MOWIxFeMih0aYies/ArUG5FkjvNQ4Nc.e",
+      "id": 2
+    }
+  ]
+}

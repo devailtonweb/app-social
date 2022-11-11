@@ -3,8 +3,7 @@
     <div class="line__one"></div>
     <div class="line__two">
       <div class="box__login">
-
-        <div class="head">
+        <div class="head mb-4">
           <img src="/assets/images/logo.svg" class="">
           <div class="">
             <h2 class="title">Entrar no Kinvo Web</h2>
@@ -13,24 +12,9 @@
             </h4>
           </div>
         </div>
-
-        <div class="row box-form">
-
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="email">Email</span>
-                <input type="text" class="form-control" aria-describedby="email">
-            </div>
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="senha">Senha</span>
-                <input type="password" class="form-control" aria-describedby="senha">
-            </div>
-
-            <div class="box-action">
-                <a class="password" href="#"> Esqueci minha senha </a>
-                <button type="button" class="btn btn-outline-secondary btn-lg btn-form"> <i class="bi bi-arrow-right-circle-fill"></i> <span>Entrar</span></button>
-            </div>
+        <div class="row">
+            <router-outlet></router-outlet>
         </div>
-
       </div>
     </div>
     <div class="line__tree"></div>

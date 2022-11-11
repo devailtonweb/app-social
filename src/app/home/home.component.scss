@@ -1,122 +1,79 @@
 .bg__login {
-  background-image: url("/assets/images/bg-login.jpg");
-  background-size: cover;
+    background-image: url("/assets/images/bg-login.jpg");
+    background-size: cover;
 
+    &::before {
+        background-image: url("/assets/images/half-circle--orange.svg");
+        position: absolute;
+        bottom: 0;
+        left: -188px;
+        width: 557px;
+        height: 187px;
+        content: "";
+    }
 }
 
 .grid__login {
-  display: grid;
-  grid-template-rows: auto 385px auto;
-  grid-template-columns: 2fr 3fr 1fr;
-  row-gap: 30px;
+    display: grid;
+    grid-template-rows: auto 385px auto;
+    grid-template-columns: 2fr 3fr 1fr;
+    row-gap: 30px;
 
-  width: 100vw;
-  height: 100vh;
+    width: 100vw;
+    height: 100vh;
 
-  .line__one {
-    grid-row: 1;
-    grid-column: 1/4;
-  }
+    .line__one {
+        grid-row: 1;
+        grid-column: 1/4;
+    }
 
-  .line__two {
-    grid-row: 2;
-    grid-column: 2;
-    display: flex;
-    justify-content: flex-end;
+    .line__two {
+        grid-row: 2;
+        grid-column: 2;
+        display: flex;
+        justify-content: flex-end;
 
-    .box__login {
-      background-color: #FFF;
-      border-radius: 1.2rem;
-      border-width: 1px;
-      border-color: rgb(239, 241, 242);
-      width: 620px;
-      padding: 2rem;
+        .box__login {
+            background-color: #FFF;
+            border-radius: 1.2rem;
+            border-width: 1px;
+            border-color: rgb(239, 241, 242);
+            width: 620px;
+            padding: 2rem;
 
-        .head {
-            display: grid;
-            grid-auto-flow: row;
-            row-gap: 40px;
-        }
+            .head {
+                display: grid;
+                grid-auto-flow: row;
+                row-gap: 30px;
+            }
 
-        .title {
-            color: var(--primary);
-            font-size: 1.25rem;
-            font-weight: 500;
-            line-height: 2.2rem;
-        }
-
-        .mini-title {
-            color: var(--primary);
-            font-size: 0.75rem;
-            font-weight: 500;
-            line-height: 1.4rem;
-
-            a {
-                color: var(--secondary);
-                text-decoration: none;
+            .title {
+                color: var(--primary);
+                font-size: 1.25rem;
                 font-weight: 500;
+                line-height: 1.2rem;
             }
-        }
 
-        .box-form {
+            .mini-title {
+                color: var(--primary);
+                font-size: 0.75rem;
+                font-weight: 500;
+                line-height: 1.4rem;
 
-            .box-action {
-
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                a.password {
+                a {
                     color: var(--secondary);
-                    font-size: 0.75rem;
-                    font-weight: 600;
-                    line-height: 1.4rem;
                     text-decoration: none;
+                    font-weight: 500;
                 }
             }
 
-            .btn-form {
-                display: flex;
-                -webkit-box-align: center;
-                align-items: center;
-                height: 40px;
-                overflow: hidden;
-                padding-right: 24px;
-                padding-left: 8px;
-                font-family: inherit;
-                border: 1px solid rgb(218, 224, 227);
-                border-radius: 16px;
-                cursor: pointer;
-                position: relative;
-                gap: 30px;
-
-                &:hover {
-                    color: var(--bs-btn-hover-color);
-                    background-color: var(--hover);
-                    border-color: var(--hover);
-                }
-
-                i {
-                    color: var(--secondary);
-                }
-
-                span {
-                    margin: auto;
-                    font-size: 0.75rem;
-                    font-weight: 600;
-                    color: var(--primary);
-                }
-            }
         }
-
 
     }
 
-  }
-
-  .line__tree {
-    grid-row: 3;
-    grid-column: 1/4;
-  }
+    .line__tree {
+        grid-row: 3;
+        grid-column: 1/4;
+    }
 
 }
