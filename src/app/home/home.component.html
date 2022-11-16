@@ -1,5 +1,5 @@
 <section class="bg__login">
-  <div class="grid__login">
+  <div class="grid__login" [class.register]="router.isActive('/home/registration', false)">
     <div class="line__one"></div>
     <div class="line__two">
       <div class="box__login">
@@ -8,7 +8,7 @@
           <div class="">
             <h2 class="title">Entrar no Kinvo Web</h2>
             <h4 class="mini-title">
-              Novo usuário? <a href="/inscreva-se">Crie uma conta</a>
+              Novo usuário? <a routerLink="registration" routerLinkActive="ativo">Crie uma conta</a>
             </h4>
           </div>
         </div>

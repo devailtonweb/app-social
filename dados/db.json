@@ -9,6 +9,15 @@
       "email": "devailtonweb@gmail.com",
       "password": "$2a$10$hV3O8nRQZ6vBeH6Uz0I8MOWIxFeMih0aYies/ArUG5FkjvNQ4Nc.e",
       "id": 2
+    },
+    {
+      "email": "luis@gmail.com",
+      "password": "$2a$10$UiI66YwEGCTnuQovA5zaiu05iS01KYeBiRDfTs5jALwaYpXdGNTFm",
+      "name": "Luís",
+      "lastName": "Felipe",
+      "document": "081.537.736-31",
+      "phone": "31232133",
+      "id": 3
     }
   ]
 }

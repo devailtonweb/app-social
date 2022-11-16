@@ -1,15 +1,38 @@
-<form class="box-form" (ngSubmit)="login()">
+<form class="box-form" (ngSubmit)="login()" #loginForm="ngForm">
     <div class="input-group mb-3">
         <span class="input-group-text" id="email">Email</span>
-        <input type="text" class="form-control" aria-describedby="email" name="email" [(ngModel)]="email">
-        <app-messages message="ola"></app-messages>
+        <input
+            type="text"
+            class="form-control"
+            aria-describedby="email"
+            name="email"
+            [(ngModel)]="email"
+            #fieldEmail="ngModel"
+            required>
+        <app-messages
+            *ngIf="fieldEmail.invalid && fieldEmail.touched"
+            class="w-100"
+            message="O campo é obrigatório">
+        </app-messages>
     </div>
     <div class="input-group mb-3">
         <span class="input-group-text" id="password">Senha</span>
-        <input type="password" class="form-control" aria-describedby="password" name="password" [(ngModel)]="password">
+        <input
+            type="password"
+            class="form-control"
+            aria-describedby="password"
+            name="password"
+            [(ngModel)]="password"
+            #fieldPassword="ngModel"
+            required>
+        <app-messages
+            *ngIf="fieldPassword.invalid && fieldPassword.touched"
+            class="w-100"
+            message="O campo é obrigatório">
+        </app-messages>
     </div>
     <div class="box-action">
         <a class="password" href="#"> Esqueci minha senha </a>
-        <button type="submit" class="btn btn-outline-secondary btn-lg btn-form"> <i class="bi bi-arrow-right-circle-fill"></i> <span>Entrar</span></button>
+        <button type="submit" class="btn btn-outline-secondary btn-lg btn-form" [disabled]="loginForm.invalid"><i class="bi bi-arrow-right-circle-fill"></i> <span>Entrar</span></button>
     </div>
 </form>

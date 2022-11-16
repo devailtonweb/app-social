@@ -1,0 +1,136 @@
+<form class="box-form" (submit)="registration()" [formGroup]="formUser">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="name">Nome</span>
+                <input
+                    type="text"
+                    class="form-control"
+                    aria-describedby="name"
+                    name="name"
+                    formControlName="name"
+                    required>
+                <app-messages
+                    *ngIf="formUser.get('name')?.errors?.['required'] && formUser.get('name')?.touched"
+                    class="w-100"
+                    message="O campo é obrigatório">
+                </app-messages>
+                <app-messages
+                    *ngIf="formUser.get('name')?.errors?.['userExist'] && formUser.get('name')?.touched"
+                    class="w-100"
+                    message="Usuário já existe">
+                </app-messages>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="lastName">Sobrenome</span>
+                <input
+                    type="text"
+                    class="form-control"
+                    aria-describedby="lastName"
+                    name="lastName"
+                    formControlName="lastName"
+                    required>
+                <app-messages
+                    *ngIf="formUser.get('lastName')?.errors?.['required'] && formUser.get('lastName')?.touched"
+                    class="w-100"
+                    message="O campo é obrigatório">
+                </app-messages>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="email">E-mail</span>
+                <input
+                    type="text"
+                    class="form-control"
+                    aria-describedby="email"
+                    name="email"
+                    formControlName="email"
+                    required>
+                <app-messages
+                    *ngIf="formUser.get('email')?.errors?.['required'] && formUser.get('email')?.touched"
+                    class="w-100"
+                    message="O campo é obrigatório">
+                </app-messages>
+                <app-messages
+                    *ngIf="formUser.get('email')?.errors?.['lowercase'] && formUser.get('email')?.touched"
+                    class="w-100"
+                    message="E-mail deve ser em letra minúscula">
+                </app-messages>
+                <app-messages
+                    *ngIf="formUser.get('email')?.errors?.['email'] && formUser.get('email')?.touched"
+                    class="w-100"
+                    message="E-mail no formato incorreto">
+                </app-messages>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="password">Senha</span>
+                <input
+                    type="password"
+                    class="form-control"
+                    aria-describedby="password"
+                    name="password"
+                    formControlName="password"
+                    required>
+                    <app-messages
+                    *ngIf="formUser.get('password')?.errors?.['required'] && formUser.get('password')?.touched"
+                    class="w-100"
+                    message="O campo é obrigatório">
+                </app-messages>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="document">CPF</span>
+                <input
+                    type="text"
+                    class="form-control"
+                    aria-describedby="document"
+                    name="document"
+                    formControlName="document"
+                    required>
+                <app-messages
+                    *ngIf="formUser.get('document')?.errors?.['required'] && formUser.get('document')?.touched"
+                    class="w-100"
+                    message="O campo é obrigatório">
+                </app-messages>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="phone">Telefone</span>
+                <input
+                    type="text"
+                    class="form-control"
+                    aria-describedby="phone"
+                    name="phone"
+                    formControlName="phone"
+                    required>
+                <app-messages
+                    *ngIf="formUser.get('phone')?.errors?.['required'] && formUser.get('phone')?.touched"
+                    class="w-100"
+                    message="O campo é obrigatório">
+                </app-messages>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-action">
+        <button type="submit" class="btn btn-outline-secondary btn-lg btn-form" [routerLink]="['/home']" routerLinkActive="router-link-active" ><i class="bi bi-arrow-left-circle-fill"></i> <span>Voltar</span></button>
+        <button type="submit" class="btn btn-outline-secondary btn-lg btn-form" [disabled]="formUser.invalid"><i class="bi bi-arrow-right-circle-fill"></i> <span>Criar conta</span></button>
+    </div>
+</form>
